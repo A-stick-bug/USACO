@@ -1,21 +1,25 @@
 # find the smallest n, where all substrings of length n are distinct
 
-with open('whereami.in', 'r') as file_in:
-    n = int(file_in.readline().strip())
-    houses = file_in.readline().strip()
+import sys
 
-with open('whereami.out', 'w') as file_out:
-    for l in range(1, n+1):
-        substrings = set()
-        flag = True
+# uncomment this when submitting, comment when running in regular coding environment (IDE)
+sys.stdin = open('whereami.in', 'r')
+sys.stdout = open('whereami.out', 'w')
 
-        for i in range(n - l + 1):
-            sub = tuple(houses[i:i + l])
-            if sub in substrings:
-                flag = False
-                break
-            substrings.add(sub)
+n = int(input())
+houses = input()
 
-        if flag:
-            file_out.write(str(l) + '\n')
+for length in range(1, n + 1):  # test every length
+    substrings = set()
+    found = True
+
+    for i in range(n - length + 1):  # go through every substring of that length
+        sub = houses[i:i + length]
+        if sub in substrings:  # repeated substring, means that this length won't work
+            found = False
             break
+        substrings.add(sub)
+
+    if found:
+        print(length)
+        break
