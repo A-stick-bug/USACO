@@ -1,3 +1,4 @@
+# using flood fill (BFS), and going through every possible sub matrix
 # TLE on test case 8, optimized as much as possible
 
 import sys
