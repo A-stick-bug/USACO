@@ -1,3 +1,4 @@
+# http://www.usaco.org/index.php?page=viewproblem2&cpid=923
 # using a 2D difference array, then prefix sum
 
 import sys
