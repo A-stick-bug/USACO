@@ -1,4 +1,5 @@
 """
+http://usaco.org/index.php?page=viewproblem2&cpid=1252
 Greedy Algorithm: put grass at furthest possible right position if the current cow needs grass
 
 Works because (no overlap):
