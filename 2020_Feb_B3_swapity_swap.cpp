@@ -1,3 +1,5 @@
+// Reusing code from 2020 Feb Silver 1: Swapity Swapity Swap
+//
 // for each cow, find where it will be after K iterations
 // note: it is guaranteed that after some number of iterations, it will end up back at its original location
 // in other words, we know that every cow is in exactly 1 cycle
@@ -24,9 +26,9 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N, M, K;
-    cin >> N >> M >> K;  // create initial state
-    for (int i = 1; i <= N; i++)
+    int N, K, M = 2;
+    cin >> N >> K;
+    for (int i = 1; i <= N; i++)  // create initial state
         cows[i] = i;
 
     int a, b;
